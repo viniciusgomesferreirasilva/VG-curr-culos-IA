@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #020617; /* slate-950 */
+    color: #f8fafc; /* slate-50 */
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Custom scrollbar for frosted glass look */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(2, 6, 23, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Accessibility Modes */
+html.text-size-sm {
+  font-size: 88%;
+}
+html.text-size-base {
+  font-size: 100%;
+}
+html.text-size-lg {
+  font-size: 115%;
+}
+html.text-size-xl {
+  font-size: 130%;
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html.high-contrast .bg-slate-950,
+html.high-contrast .bg-slate-900,
+html.high-contrast .bg-white\/5,
+html.high-contrast .bg-white\/10 {
+  background-color: #050505 !important;
+}
+html.high-contrast .border-white\/10,
+html.high-contrast .border-white\/15,
+html.high-contrast .border-white\/20,
+html.high-contrast .border-slate-800 {
+  border-color: #facc15 !important;
+}
+html.high-contrast .text-slate-400,
+html.high-contrast .text-slate-300,
+html.high-contrast .text-zinc-400 {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+html.high-contrast .text-blue-400,
+html.high-contrast .text-indigo-400 {
+  color: #38bdf8 !important;
+}
+html.high-contrast input,
+html.high-contrast textarea,
+html.high-contrast select {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 2px solid #facc15 !important;
+}
+html.high-contrast button {
+  border: 1px solid #ffffff !important;
+}
+html.high-contrast .ambient-orb {
+  display: none !important;
+}
+
+/* Grayscale Mode */
+html.grayscale-mode {
+  filter: grayscale(100%) !important;
+}
+
+/* Enhanced Focus Outline for Keyboard Navigation */
+html.enhanced-focus *:focus-visible {
+  outline: 3px solid #38bdf8 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced Motion Mode */
+html.reduced-motion *,
+html.reduced-motion *::before,
+html.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  header, footer, nav, button, .print\:hidden, #app-navigation, #form-container, .ambient-orb {
+    display: none !important;
+  }
+
+  #resume-a4-canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: #0f172a !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
+

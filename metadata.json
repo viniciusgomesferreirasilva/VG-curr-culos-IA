@@ -1,0 +1,6 @@
+{
+  "name": "VG Currículos AI",
+  "description": "Plataforma inteligente de criação de currículos profissionais compatíveis com sistemas ATS, cartas de apresentação e simulador de entrevistas com IA.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
