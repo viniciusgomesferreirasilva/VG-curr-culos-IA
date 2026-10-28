@@ -6,7 +6,7 @@ def git(*args):
  return subprocess.check_output(['git',*args],cwd=repo,text=True).strip()
 if git('status','--porcelain'):
  raise SystemExit('Commit all intended changes before publishing; working tree must be clean.')
-git('fetch','origin','gh-pages')
+git('fetch','origin','refs/heads/gh-pages:refs/remotes/origin/gh-pages')
 tree=git('rev-parse','HEAD:vila-park')
 parent=git('rev-parse','origin/gh-pages')
 git('push','origin','HEAD:main')
