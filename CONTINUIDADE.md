@@ -41,3 +41,11 @@ Após cada alteração: validar, commitar, executar `python3 vila-parque/publica
 Nome solicitado e definitivo: **Vila Parque**, em português. Pasta versionada: `vila-parque/`; usar `python3 vila-parque/publicar.py`. Site e PDF único atualizados. Novas ferramentas: busca, filtro por favoritos locais e navegação da galeria por teclado.
 
 A criação do novo repositório público `viniciusgomesferreirasilva/Vila-Parque` foi bloqueada pela revisão automática por falta de autorização explícita para esse novo destino público. Não repetir nem contornar a rejeição; pedir autorização específica ao usuário. Até lá, manter backup e site no repositório e URL existentes, sem dizer que a URL mudou.
+
+## Autorização de migração confirmada pelo usuário
+
+O usuário autorizou explicitamente criar o repositório público `viniciusgomesferreirasilva/Vila-Parque`. Não pedir essa autorização novamente. A revisão automática aceitou a tentativa de criação após essa confirmação; `gh repo create viniciusgomesferreirasilva/Vila-Parque --public` falhou antes da criação: `Get https://api.github.com/users/viniciusgomesferreirasilva: Forbidden`.
+
+Diagnóstico: a política de rede em execução não inclui `api.github.com`. `GH_TOKEN` está presente; não ler seu valor nem solicitar token novo sem testar a configuração após a liberação da rede. Rascunho de configuração atualizado com os destinos adicionais `api.github.com` e `viniciusgomesferreirasilva.github.io`, preservando os presets existentes. Ferramenta confirmou `status: saved`, `requires_publish: true`. Essa gravação não aplica a política à instância em execução. Nome do ambiente corrigido para Vila Parque por ferramenta de metadados, com sucesso.
+
+Próximos passos quando as configurações forem aplicadas/publicadas: conferir o estado do ambiente, repetir a operação de criação autorizada; se funcionar, publicar somente o conteúdo de `vila-parque/` na raiz da main e da gh-pages do novo repositório, verificar deploy nativo e passar o novo link `/Vila-Parque/`. Preservar o repositório anterior como backup; não renomeá-lo nem remover o aplicativo de currículos. URL nova ainda não foi criada nem validada. Não contornar o proxy ou a política de rede.
