@@ -28,3 +28,9 @@ O arquivo `BOOK_MALL_E_OFFICE_32MB.pdf` foi baixado com sucesso (10.203.481 byte
 Site atualizado com Mall & Office, ficha técnica, endereço, créditos, 16 plantas com filtro por Mall/Office e galeria das 23 páginas. Fotografias extraídas dos objetos originais. PDF público único: `assets/vila-park-apresentacao-completa.pdf` (41 páginas: capa nova + 17 do VP + 23 do BOOK). `unificar_pdf.py` reproduz o PDF e verifica texto e hashes de todas as imagens das 40 páginas-fonte. Não oferecer dois PDFs ao usuário nem arquivo ZIP como forma principal de acesso.
 
 Diagnóstico confirmado de publicação: Actions run 40713909079 falhou em configure-pages porque o GITHUB_TOKEN não pode criar o site Pages: `Resource not accessible by integration`. Página ainda não habilitada. API administrativa retorna Forbidden nesta sessão. Ler Actions pela interface web github.com funciona. Não afirmar que Pages está publicado sem evidência.
+
+## Publicação resolvida
+
+O envio direto de uma branch `gh-pages` com o site na raiz ativou o GitHub Pages nativo automaticamente. Run `40715346928` terminou com **Status Success**, duração 45s, e publicou `https://viniciusgomesferreirasilva.github.io/VG-curr-culos-IA/`. A instrução anterior de exigir ativação manual está superada. O workflow personalizado que falhava foi removido para utilizar somente a publicação nativa.
+
+Após cada alteração: validar, commitar, executar `python3 vila-park/publicar.py` na raiz do repositório com acesso ao proxy Git. O script envia main e uma atualização sem force-push para gh-pages. Conferir o novo workflow nativo e fornecer o link direto ao usuário. O conteúdo público de gh-pages corresponde à pasta vila-park da main.

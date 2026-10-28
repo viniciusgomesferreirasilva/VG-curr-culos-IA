@@ -26,3 +26,7 @@ Validação executada: Chromium, 1440×1000 e 390×844; carregamento sem erro Ja
 ## PDF único
 
 `assets/vila-park-apresentacao-completa.pdf` reúne capa editorial, as 17 páginas VP e as 23 páginas BOOK. `unificar_pdf.py` gera o documento e verifica todos os textos e hashes das imagens. O site oferece somente esse PDF unificado.
+
+## Site publicado
+
+A publicação nativa via branch `gh-pages` resolveu o bloqueio inicial. Run 40715346928: Status Success. Site: https://viniciusgomesferreirasilva.github.io/VG-curr-culos-IA/ . O workflow personalizado anterior foi removido. Para futuras alterações já commitadas, `python3 vila-park/publicar.py` envia main e gh-pages sem force-push; conferir o resultado do deploy nativo.
