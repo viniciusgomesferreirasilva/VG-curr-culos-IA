@@ -32,3 +32,17 @@ document.querySelector('#close-image').addEventListener('click', () => imageDial
 imageDialog.addEventListener('click', event => {
   if (event.target === imageDialog) imageDialog.close();
 });
+
+document.querySelectorAll('[data-plan-filter]').forEach(button => {
+ button.addEventListener('click', () => {
+  const category = button.dataset.planFilter;
+  document.querySelectorAll('[data-plan-filter]').forEach(tab => {
+   const active = tab === button;
+   tab.classList.toggle('active', active);
+   tab.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-plan-category]').forEach(card => {
+   card.hidden = card.dataset.planCategory !== category;
+  });
+ });
+});

@@ -20,3 +20,11 @@ Use o checkout existente, sem criar worktrees. `python3 -m http.server 4173 --bi
 ## Entregas
 
 Salvar alterações do site com commit e push para main; conferir o SHA remoto. Informar link público somente quando houver confirmação. Nunca descrever um commit local como backup remoto concluído.
+
+## Atualização: BOOK recebido e integrado
+
+O arquivo `BOOK_MALL_E_OFFICE_32MB.pdf` foi baixado com sucesso (10.203.481 bytes), aberto e analisado: 23 páginas. As pendências anteriores sobre acesso ao BOOK estão resolvidas. Original retido em `assets/book-mall-office-original.pdf`.
+
+Site atualizado com Mall & Office, ficha técnica, endereço, créditos, 16 plantas com filtro por Mall/Office e galeria das 23 páginas. Fotografias extraídas dos objetos originais. PDF público único: `assets/vila-park-apresentacao-completa.pdf` (41 páginas: capa nova + 17 do VP + 23 do BOOK). `unificar_pdf.py` reproduz o PDF e verifica texto e hashes de todas as imagens das 40 páginas-fonte. Não oferecer dois PDFs ao usuário nem arquivo ZIP como forma principal de acesso.
+
+Diagnóstico confirmado de publicação: Actions run 40713909079 falhou em configure-pages porque o GITHUB_TOKEN não pode criar o site Pages: `Resource not accessible by integration`. Página ainda não habilitada. API administrativa retorna Forbidden nesta sessão. Ler Actions pela interface web github.com funciona. Não afirmar que Pages está publicado sem evidência.
