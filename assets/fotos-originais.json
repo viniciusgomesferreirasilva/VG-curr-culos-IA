@@ -1,0 +1,37 @@
+[
+  {
+    "file": "assets/passaros.jpeg",
+    "source_page": 12,
+    "source_xref": 357,
+    "sha256": "e6093bc409552cffe08099e4cd36365e3a508dae3aefb0ce98ff8a4fbe6a40a6",
+    "transformation": "none; original embedded image bytes"
+  },
+  {
+    "file": "assets/passaros-vista.jpeg",
+    "source_page": 13,
+    "source_xref": 383,
+    "sha256": "092dcc7279acbb20ef4736460bd0498dfd1824f9272c3c8dd2e24aba6f5a96d1",
+    "transformation": "none; original embedded image bytes"
+  },
+  {
+    "file": "assets/clube.jpeg",
+    "source_page": 14,
+    "source_xref": 409,
+    "sha256": "df2d91b4d40c7404e086e60cd2bc0901a151d942eabdea5922584684abaff9cc",
+    "transformation": "none; original embedded image bytes"
+  },
+  {
+    "file": "assets/clube-vista.jpeg",
+    "source_page": 14,
+    "source_xref": 410,
+    "sha256": "3334a1c477f93aa57c9359cef59a406dfee3d27a3de52cbf0b5ca380119a04ab",
+    "transformation": "none; original embedded image bytes"
+  },
+  {
+    "file": "assets/centro-comercial.jpeg",
+    "source_page": 15,
+    "source_xref": 436,
+    "sha256": "b2855170c1ea7b3292dc290fe70b96cdd48c8965c41613b2d685501094f53e84",
+    "transformation": "none; original embedded image bytes"
+  }
+]
